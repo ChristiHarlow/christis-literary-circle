@@ -1,3 +1,5 @@
+import heroImage from "../assets/Hero.png";
+
 export default function Hero() {
   return (
     <section className="hero">
