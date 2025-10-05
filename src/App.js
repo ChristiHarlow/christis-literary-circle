@@ -20,8 +20,7 @@ function App() {
         <div className="hero-inner">
           <h1>Christi’s Literary <span className="accent">Circle</span></h1>
           <p>
-            Welcome to my little literary corner. I’ve handpicked stories that challenge,
-            comfort, and encourage—come sit, grab a cup of tea, and join the conversation.
+            Welcome to my little literary corner. Come sit, grab a cup of tea, and join the conversation.
           </p>
         </div>
       </section>
