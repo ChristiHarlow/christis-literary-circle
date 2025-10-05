@@ -1,28 +1,35 @@
-import heroImage from "../assets/Hero.png";
+import React from "react";
+import heroImage from "../assets/Hero.png"; // ✅ Correct relative path
 
-export default function Hero() {
+function Hero() {
   return (
-    <section className="hero">
-      <div className="hero-inner">
-        <h1>
-          Christi’s Literary <span className="accent">Circle</span>
+    <section
+      className="hero"
+      style={{
+        backgroundImage: `url(${heroImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "80vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#fff",
+        textAlign: "center",
+      }}
+    >
+      <div className="hero-content" style={{ backgroundColor: "rgba(0,0,0,0.5)", padding: "2rem", borderRadius: "10px" }}>
+        <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>
+          Christi’s Literary <span style={{ color: "#FFD700" }}>Circle</span>
         </h1>
-        <p>
-          Welcome to my little literary corner. I’ve handpicked stories that challenge,
-          comfort, and encourage—and I’d be honored to share them with you.
-          Come sit, grab a cup of tea, and join the conversation.
+        <p style={{ fontSize: "1.25rem", maxWidth: "600px", margin: "0 auto" }}>
+          Welcome to my little literary corner. I’ve handpicked stories that challenge, comfort, and encourage—
+          come sit, grab a cup of tea, and join the conversation.
         </p>
-        <div className="cta-row">
-          <a
-            className="btn"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSe6wsGTC-Lv8zbRqG9-h1gjG2qug1XZsCMZoli4TYqcpNdQRQ/viewform?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Join the Circle
-          </a>
-        </div>
       </div>
     </section>
   );
 }
+
+export default Hero;
+
