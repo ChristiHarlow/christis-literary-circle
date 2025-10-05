@@ -11,7 +11,7 @@ function App() {
       link: "https://www.amazon.com/dp/1400226647",
       description: "Waging and winning the war within."
     },
-    // add more books…
+    // add more books here...
   ];
 
   return (
@@ -19,7 +19,10 @@ function App() {
       <section className="hero">
         <div className="hero-inner">
           <h1>Christi’s Literary <span className="accent">Circle</span></h1>
-          <p>Welcome to my little literary corner. I’ve handpicked stories that challenge, comfort, and encourage—come sit, grab a cup of tea, and join the conversation.</p>
+          <p>
+            Welcome to my little literary corner. I’ve handpicked stories that challenge,
+            comfort, and encourage—come sit, grab a cup of tea, and join the conversation.
+          </p>
         </div>
       </section>
 
@@ -34,3 +37,4 @@ function App() {
 }
 
 export default App;
+
