@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Hero from "./components/Hero";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <>
+      <Hero />
+      <main className="container">
+        <h2 className="section-title">Books to Explore</h2>
+        {/* TODO: render <BookCard /> grid here */}
+        <p style={{color: "var(--muted)"}}>
+          Your book grid will go here. We’ll wire it up after the Hero is set.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </main>
+    </>
   );
 }
-
-export default App;
