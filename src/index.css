@@ -24,7 +24,7 @@ body { margin:0; background: var(--bg); color: var(--text); font-family: system-
 .hero::before{
   content:"";
   position:absolute; inset:0;
-  background: url("/images/books/hero.jpg") center/cover no-repeat; /* optional hero image */
+  background: url("/assets/Hero.png") center/cover no-repeat; /* optional hero image */
   filter: brightness(0.85);
 }
 .hero::after{
