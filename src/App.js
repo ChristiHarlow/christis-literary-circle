@@ -1,5 +1,5 @@
 import "./index.css";
-import BookCard from "./components/BookCard";
+
 
 function App() {
   const books = [
