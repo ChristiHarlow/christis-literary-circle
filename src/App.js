@@ -1,7 +1,9 @@
 import "./index.css";
+import Hero from "./componenets/Hero";
 import BookCard from "./components/BookCard";
-
-
+import CurrentBook from "./components/CurrentBook";
+import UpcomingBook from "./components/UpcomingBook";
+import Footer from "./components/Footer"; 
 
 function App() {
   const books = [
@@ -18,21 +20,28 @@ function App() {
 
   return (
     <>
-      <section className="hero">
-        <div className="hero-inner">
-          <h1>Christi’s Literary <span className="accent">Circle</span></h1>
-          <p>
-            Welcome to my little literary corner. Come sit, grab a cup of tea, and join the conversation.
-          </p>
-        </div>
+      {/* 1) Current Book */}
+      <section className="container" style={{ paddingTop: "2rem" }}>
+        <h2 className="section-title">Current Book</h2>
+        <CurrentBook />
       </section>
 
+      {/* 2) Books to Explore */}
       <main className="container">
         <h2 className="section-title">Books to Explore</h2>
         <div className="grid">
           {books.map((b, i) => <BookCard key={i} {...b} />)}
         </div>
       </main>
+
+      {/* 3) Footer */}
+      <Footer />
+
+      {/* 4) Upcoming Book (after Footer, as requested) */}
+      <section className="container" style={{ paddingTop: "1.25rem", paddingBottom: "3rem" }}>
+        <h2 className="section-title">Upcoming Book</h2>
+        <UpcomingBook />
+      </section>
     </>
   );
 }
