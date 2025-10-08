@@ -23,7 +23,7 @@ function Hero() {
           Christi’s Literary <span style={{ color: "#FFD700" }}>Circle</span>
         </h1>
         <p style={{ fontSize: "1.25rem", maxWidth: "600px", margin: "0 auto" }}>
-          Welcome to my little literary corner. I’ve handpicked stories that challenge, comfort, and encourage—
+          Welcome to my little literary circle. I’ve handpicked stories that challenge, comfort, and encourage—
           come sit, grab a cup of tea, and join the conversation.
         </p>
       </div>
