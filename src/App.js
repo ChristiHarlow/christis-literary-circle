@@ -1,5 +1,5 @@
 import "./index.css";
-import Hero from "./componenets/Hero";
+import Hero from "./components/Hero";
 import BookCard from "./components/BookCard";
 import CurrentBook from "./components/CurrentBook";
 import UpcomingBook from "./components/UpcomingBook";
