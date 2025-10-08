@@ -13,8 +13,8 @@ export default function CurrentBook() {
 
   // Display it a bit larger than grid cards
   return (
-    <div style={{ maxWidth: 720, margin: "0 auto" }}>
+    
       <BookCard {...current} />
-    </div>
+    
   );
 }
