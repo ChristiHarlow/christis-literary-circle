@@ -1,18 +1,18 @@
 :root{
-  --bg: #1e0f2e;            /* deep violet page */
-  --hero-violet: #7209b7;   /* bright violet */
-  --hero-indigo: #3a0ca3;   /* deep indigo */
-  --card: #2a1450;          /* card bg (deep purple) */
-  --text: #ffffff;
-  --muted: #d6d2e0;
-  --yellow: #ffd23f;        /* bright yellow CTA */
-  --blue: #4361ee;          /* electric blue accent */
-  --aqua: #4cc9f0;          /* aqua accent */
+   /* Base + palette */
+  --cream: #fdf0d5;
+  --deep-crimson: #780000;
+  --vibrant-red: #c1121f;
+  --pumpkin: #e36414;
+  --navy: #003049;
+  --sky: #669bbc;   /* <- Buy Now + accents */
+
+  --text: #1d1b1a;
 }
 
 /* Page baseline */
 html, body, #root { height: 100%; }
-body { margin:0; background: var(--bg); color: var(--text); font-family: system-ui, Arial, sans-serif; }
+body { margin:0; background: var(--cream); color: var(--text); font-family: system-ui, Arial, sans-serif; }
 
 /* Hero */
 .hero {
@@ -74,19 +74,45 @@ body { margin:0; background: var(--bg); color: var(--text); font-family: system-
 }
 .price{ color: var(--yellow); font-weight: 700; }
 
+/* Shared button */
 .btn{
-  background: var(--yellow); color: #1a1030; border:none;
-  padding: .5rem .8rem; border-radius: 10px; font-weight:600;
-  cursor:pointer; transition: opacity .15s ease, transform .15s ease;
+  appearance: none;
+  border: 0;
+  border-radius: 12px;
+  padding: .7rem 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .15s ease, opacity .15s ease, box-shadow .15s ease;
 }
-.btn:hover{ opacity:.9; transform: translateX(1px); }
+
+/* Buy Now in #669bbc */
+.btn-buy{
+  background: var(--sky);          /* #669bbc */
+  color: #ffffff;                  /* white text for contrast */
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+.btn-buy:hover{
+  transform: translateY(-1px);
+  opacity: .95;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+}
 
 /* Section headers */
 .section-title{
-  color: var(--blue);
+  color: var(--navy);
   margin: 0 0 1rem;
   font-size: 1.6rem;
 }
+
+.card{
+  background: #fff;                /* or a very light cream if you like */
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+}
+.card h3{ color: var(--deep-crimson); }
+.card .meta{ color: var(--navy); }
+.badge{ background: var(--pumpkin); color: #fff; border-radius: 999px; padding: .25rem .5rem; font-size: .75rem; }
  /* Page wrapper = flex column full height */
 .page {
   min-height: 100%;
