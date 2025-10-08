@@ -15,6 +15,23 @@ function App() {
       link: "https://www.amazon.com/dp/1400226647",
       description: "Waging and winning the war within.",
     },
+
+    {
+      title: "Battle Cry",
+      author: "Jason Wilson",
+      cover: "/images/books/jasonWilson.png",
+      price: "$18.99",
+      link: "https://www.amazon.com/dp/1400226647",
+      description: "Waging and winning the war within.",
+    },
+    {
+      title: "Battle Cry",
+      author: "Jason Wilson",
+      cover: "/images/books/jasonWilson.png",
+      price: "$18.99",
+      link: "https://www.amazon.com/dp/1400226647",
+      description: "Waging and winning the war within.",
+    },
     // add more books...
   ];
 
