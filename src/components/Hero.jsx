@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "../assets/Hero.png"; // <- your image
+import heroImage from "../assets/Hero.png";
 
 export default function Hero() {
   return (
@@ -14,7 +14,7 @@ export default function Hero() {
         color: "#fff",
       }}
     >
-      {/* Background image */}
+      {/* Background image ONLY — no filters, no overlays */}
       <div
         style={{
           position: "absolute",
@@ -23,17 +23,6 @@ export default function Hero() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          filter: "brightness(0.92)",
-        }}
-      />
-
-      {/* Soft violet overlay so text stays readable */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "linear-gradient(135deg, rgba(114,9,183,0.45), rgba(58,12,163,0.45))",
         }}
       />
 
@@ -45,6 +34,7 @@ export default function Hero() {
           textAlign: "center",
           padding: "2rem 1.5rem",
           maxWidth: 860,
+          textShadow: "0 2px 10px rgba(0,0,0,.45)", // ← remove this line if you want *no* effect
         }}
       >
         <h1 style={{ fontSize: "clamp(2.2rem, 6vw, 4rem)", margin: 0 }}>
@@ -54,7 +44,6 @@ export default function Hero() {
           style={{
             fontSize: "clamp(1.05rem, 2.5vw, 1.35rem)",
             marginTop: "0.75rem",
-            opacity: 0.92,
           }}
         >
           Welcome to my little literary corner. I’ve handpicked stories that
@@ -65,4 +54,3 @@ export default function Hero() {
     </section>
   );
 }
-
