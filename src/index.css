@@ -85,3 +85,13 @@ body { margin:0; background: var(--bg); color: var(--text); font-family: system-
   margin: 0 0 1rem;
   font-size: 1.6rem;
 }
+ /* Page wrapper = flex column full height */
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main grows; footer sits at the end */
+main { flex: 1 0 auto; }
+footer { flex-shrink: 0; }
