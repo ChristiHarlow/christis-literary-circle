@@ -45,22 +45,24 @@ body { margin:0; background: var(--bg); color: var(--text); font-family: system-
 /* Book grid */
 .grid{
   display:grid; gap: 1.25rem;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
 /* Card */
 .card{
-  background: var(--card);
+  background: var(--card, #2a1450);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 16px;
-  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.4);
-  overflow:hidden;
+  overflow: hidden;
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .card:hover{ transform: translateY(-4px); box-shadow: 0 14px 34px -10px rgba(255,210,63,0.35); }
 
 .card img{
-  width:100%; aspect-ratio: 3/4; object-fit:cover; display:block;
+  width: 100%;
+  aspect-ratio: 3 / 4;   /* same image aspect for all cards */
+  object-fit: cover;
+  display: block;
 }
 .card-body{ padding: 1rem 1rem 0.75rem; }
 .card h3{ margin: 0 0 0.25rem; font-size: 1.05rem; }
