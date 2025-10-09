@@ -8,18 +8,18 @@ import Footer from "./components/Footer";
 function App() {
   const books = [
     {
-      title: "Battle Cry",
-      author: "Jason Wilson",
-      cover: "/images/books/jasonWilson.png",
+      title: "The Let Them Theory",
+      author: "Mel Robbins",
+      cover: "/images/books/melRobbins.png",
      
-      link: "https://www.amazon.com/dp/1400226647",
-      description: "Waging and winning the war within.",
+      link: "https://www.amazon.com/dp/1401971369?tag=lnk0001-20&geniuslink=true",
+      description: "If you've ever felt stuck, overwhelmed, or frustrated with where you are, the problem isn't you. The problem is the power you give to other people. Two simple words—Let Them—will set you free.",
     },
 
     {
       title: "You Deserve to Be Rich: Master the Inner Game of Wealth and Claim Your Future",
       author: "Rashad Bilal and Troy Millings",
-      cover: "/images/books/jasonWilson.png",
+      cover: "/images/books/rashadTroy.png",
       
       link: "https://www.amazon.com/You-Deserve-Be-Rich-Master/dp/059372819X",
       description: "This book is full of tips, insights, and stories about real people, just like you, who have used the tools of wealth building to overcome barriers and build the life they want.",
