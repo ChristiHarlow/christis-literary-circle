@@ -4,6 +4,7 @@ import BookCard from "./components/BookCard";
 import CurrentBook from "./components/CurrentBook";
 import UpcomingBook from "./components/UpcomingBook";
 import Footer from "./components/Footer";
+import FeedbackPage from "./components/FeedbackPage";
 
 function App() {
   const books = [
@@ -35,45 +36,47 @@ function App() {
     // add more books...
   ];
 
-  return (
-    <div className="page"> {/* makes sticky footer layout possible */}
-      {/* Hero at the very top */}
-      <Hero />
+    return (
+    <Router>
+      <div className="page">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <section className="container">
+                  <h2 className="section-title">Current Book</h2>
+                  <div className="grid cards">
+                    <CurrentBook />
+                  </div>
+                </section>
 
-      {/* Main content area grows to fill space */}
-      <main>
-        {/* 1) Current Book */}
-        <section className="container" style={{ paddingTop: "2rem" }}>
-          <h2 className="section-title">Current Book</h2>
-          <CurrentBook />
-        </section>
+                <section className="container">
+                  <h2 className="section-title">Books to Explore</h2>
+                  <div className="grid cards">
+                    {books.map((b, i) => (
+                      <BookCard key={i} {...b} />
+                    ))}
+                  </div>
+                </section>
 
-        {/* 2) Books to Explore */}
-        <section className="container">
-          <h2 className="section-title">Books to Explore</h2>
-          <div className="grid">
-            {books.map((b, i) => (
-              <BookCard key={i} {...b} />
-            ))}
-          </div>
-        </section>
+                <section className="container">
+                  <h2 className="section-title">Upcoming Book</h2>
+                  <div className="grid cards">
+                    <UpcomingBook />
+                  </div>
+                </section>
 
-        {/* 3) Upcoming Book */}
-        <section
-          className="container"
-          style={{ paddingTop: "1.25rem", paddingBottom: "3rem" }}
-        >
-          <h2 className="section-title">Upcoming Book</h2>
-          <UpcomingBook />
-        </section>
-      </main>
-
-      {/* 4) Footer - always at the very bottom */}
-      <Footer />
-    </div>
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/feedback/:title" element={<FeedbackPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
-
-
