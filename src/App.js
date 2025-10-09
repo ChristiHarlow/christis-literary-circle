@@ -25,12 +25,12 @@ function App() {
       description: "This book is full of tips, insights, and stories about real people, just like you, who have used the tools of wealth building to overcome barriers and build the life they want.",
     },
     {
-      title: "Battle Cry",
-      author: "Jason Wilson",
-      cover: "/images/books/jasonWilson.png",
+      title: "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+      author: "James Clear",
+      cover: "/images/books/jamesClear.png",
      
-      link: "https://www.amazon.com/dp/1400226647",
-      description: "Waging and winning the war within.",
+      link: "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299/ref=sr_1_1?adgrpid=1330409634350496&dib=eyJ2IjoiMSJ9.FB6abDmi04mz9MCXGc_sAmloU_whL4u8484PSvfs30s5WliN6Da3QsER3V5__F5yZipwcpxymCdNY3yp7LlzL76Iv4kkDaMKppLeFf-s_0e5oOKloNunVc1gff8Qm4dVi0fTrndIsBVns3pQ02mRN_2QzRDoaZSCLrKVYisruPzWW0_V5f4fwzlwh_fWsFENZGA_c04IOIg5449PahALWzQYh7omG-f33S0hfhVXIA0.cr2FVSMuKW_GAwQqmgKFkqCkFNf__uPvGkH0Qf69_hA&dib_tag=se&hvadid=83150991965817&hvbmt=bp&hvdev=c&hvlocphy=105475&hvnetw=o&hvqmt=p&hvtargid=kwd-83150948681363%3Aloc-190&hydadcr=22167_13576408&keywords=atomic+habits+kindle&mcid=7f78a16a18893b24b459afc31fee3fd4&msclkid=69dadeb180691406c759b65990efe6d8&qid=1760039103&sr=8-1",
+      description: "Atomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits--whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal.",
     },
     // add more books...
   ];
