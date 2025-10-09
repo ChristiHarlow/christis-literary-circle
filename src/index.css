@@ -1,80 +1,99 @@
 :root{
-   /* Base + palette */
-  --cream: #fdf0d5;
+  /* Base + palette */
+  --cream: #fdf0d5;      /* page background */
   --deep-crimson: #780000;
   --vibrant-red: #c1121f;
   --pumpkin: #e36414;
-  --navy: #003049;
-  --sky: #669bbc;   /* <- Buy Now + accents */
-
-  --text: #1d1b1a;
+  --navy: #003049;       /* headings / accents */
+  --sky: #669bbc;        /* Buy Now + accents */
+  --text: #1d1b1a;       /* base text */
 }
 
 /* Page baseline */
 html, body, #root { height: 100%; }
-body { margin:0; background: var(--cream); color: var(--text); font-family: system-ui, Arial, sans-serif; }
+body{
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: system-ui, Arial, sans-serif;
+}
 
-/* Hero */
-.hero {
+/* Hero (image is set from the component; no overlays/filters) */
+.hero{
   position: relative;
   min-height: 70vh;
-  display:flex; align-items:center; justify-content:center;
-  overflow:hidden;
-}
-.hero::before{
-  content:"";
-  position:absolute; inset:0;
-  
-  filter: brightness(0.85);
-}
-.hero::after{
-  content:"";
-  position:absolute; inset:0;
-  background: linear-gradient(135deg, rgba(114,9,183,0.55), rgba(58,12,163,0.55));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .hero-inner{
-  position:relative; z-index:1; text-align:center; padding: 0 1.5rem; max-width:900px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 1.5rem;
+  max-width: 900px;
+  text-shadow: 0 2px 10px rgba(0,0,0,.45); /* remove if you want zero effects */
 }
-.hero h1{ font-size: clamp(2.2rem, 6vw, 4rem); margin:0 0 0.5rem; }
-.hero .accent{ color: var(--aqua); }
-.hero p{ font-size: clamp(1.05rem, 2.5vw, 1.4rem); color: var(--muted); }
+.hero h1{ font-size: clamp(2.2rem, 6vw, 4rem); margin: 0 0 .5rem; }
+.hero .accent{ color: var(--sky); }
+.hero p{ font-size: clamp(1.05rem, 2.5vw, 1.4rem); }
 
 /* Layout */
 .container{ max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem; }
 
-/* Book grid */
+/* Book grid (used by Current, Explore, Upcoming) */
 .grid{
-  display:grid; gap: 1.25rem;
+  display: grid;
+  gap: 1.25rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
 /* Card */
 .card{
-  background: var(--card, #2a1450);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: #fff; /* white card on cream page */
+  border: 1px solid rgba(0,0,0,.06);
   border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,.06);
   transition: transform .2s ease, box-shadow .2s ease;
+  width: 100%;
 }
-.card:hover{ transform: translateY(-4px); box-shadow: 0 14px 34px -10px rgba(255,210,63,0.35); }
-
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.10);
+}
 .card img{
   width: 100%;
-  aspect-ratio: 3 / 4;   /* same image aspect for all cards */
+  aspect-ratio: 3 / 4;   /* consistent cover shape */
   object-fit: cover;
   display: block;
 }
-.card-body{ padding: 1rem 1rem 0.75rem; }
-.card h3{ margin: 0 0 0.25rem; font-size: 1.05rem; }
-.card .author{ color: var(--muted); font-size: .9rem; }
-
-.card-footer{
-  display:flex; justify-content:space-between; align-items:center;
-  padding: 0 1rem 1rem;
+.card-body{ padding: 1rem 1rem .75rem; }
+.card h3{
+  margin: 0 0 .25rem;
+  font-size: 1.1rem;
+  color: var(--deep-crimson);
+  line-height: 1.25;
 }
-.price{ color: var(--yellow); font-weight: 700; }
+.card .author{
+  color: var(--navy);
+  font-size: .95rem;
+  opacity: .9;
+}
+.card p{ color: #4b4a47; }
 
-/* Shared button */
+/* Footer row of the card */
+.card-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 1rem;
+  gap: .75rem;
+}
+.price{ color: var(--text); font-weight: 700; }
+
+/* Buttons */
 .btn{
   appearance: none;
   border: 0;
@@ -85,11 +104,9 @@ body { margin:0; background: var(--cream); color: var(--text); font-family: syst
   text-decoration: none;
   transition: transform .15s ease, opacity .15s ease, box-shadow .15s ease;
 }
-
-/* Buy Now in #669bbc */
 .btn-buy{
-  background: var(--sky);          /* #669bbc */
-  color: #ffffff;                  /* white text for contrast */
+  background: var(--sky);   /* #669bbc */
+  color: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 .btn-buy:hover{
@@ -105,21 +122,20 @@ body { margin:0; background: var(--cream); color: var(--text); font-family: syst
   font-size: 1.6rem;
 }
 
-.card{
-  background: #fff;                /* or a very light cream if you like */
-  border: 1px solid rgba(0,0,0,.06);
-  border-radius: 16px;
+/* Optional badge style if you use them */
+.badge{
+  background: var(--pumpkin);
+  color: #fff;
+  border-radius: 999px;
+  padding: .25rem .5rem;
+  font-size: .75rem;
 }
-.card h3{ color: var(--deep-crimson); }
-.card .meta{ color: var(--navy); }
-.badge{ background: var(--pumpkin); color: #fff; border-radius: 999px; padding: .25rem .5rem; font-size: .75rem; }
- /* Page wrapper = flex column full height */
-.page {
+
+/* Sticky footer layout helpers */
+.page{
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
-
-/* Main grows; footer sits at the end */
-main { flex: 1 0 auto; }
-footer { flex-shrink: 0; }
+main{ flex: 1 0 auto; }
+footer{ flex-shrink: 0; }
