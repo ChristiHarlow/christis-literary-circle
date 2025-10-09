@@ -1,0 +1,7 @@
+.btn-buy{
+  background: var(--sky); /* #669bbc */
+  color: #fff;
+}
+.card-title{ color: var(--deep-crimson); }
+.card-author{ color: var(--navy); }
+
