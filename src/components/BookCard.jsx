@@ -1,36 +1,32 @@
-import "./BookCard.css";
-
-export default function BookCard({
-  title,
-  author,
-  cover,
-  price,
-  link,
-  description,
-}) {
+export default function BookCard({ title, author, cover, price, link, description }) {
   return (
     <div className="card">
-      <img className="card-image" src={cover} alt={`${title} cover`} />
-
+      <img src={cover} alt={`${title} cover`} />
       <div className="card-body">
-        <h3 className="card-title">{title}</h3>
-        <div className="card-author">by {author}</div>
-
-        {description ? (
-          <p className="card-desc">{description}</p>
-        ) : null}
+        <h3>{title}</h3>
+        <div className="author">by {author}</div>
+        {description && <p style={{ marginTop: ".5rem" }}>{description}</p>}
       </div>
 
       <div className="card-footer">
-        {price ? <span className="price">{price}</span> : <span />}
-        <a
-          className="btn btn-buy"
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Buy Now
-        </a>
+        <span className="price">{price}</span>
+        <div style={{ display: "flex", gap: ".5rem" }}>
+          <a
+            className="btn btn-buy"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            More Information
+          </a>
+          <a
+            className="btn"
+            href={`/feedback/${encodeURIComponent(title)}`}
+            style={{ background: "var(--pumpkin)", color: "#fff" }}
+          >
+            Share Thoughts
+          </a>
+        </div>
       </div>
     </div>
   );
