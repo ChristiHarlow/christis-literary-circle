@@ -17,12 +17,12 @@ function App() {
     },
 
     {
-      title: "Battle Cry",
-      author: "Jason Wilson",
+      title: "You Deserve to Be Rich: Master the Inner Game of Wealth and Claim Your Future",
+      author: "Rashad Bilal and Troy Millings",
       cover: "/images/books/jasonWilson.png",
       
-      link: "https://www.amazon.com/dp/1400226647",
-      description: "Waging and winning the war within.",
+      link: "https://www.amazon.com/You-Deserve-Be-Rich-Master/dp/059372819X",
+      description: "This book is full of tips, insights, and stories about real people, just like you, who have used the tools of wealth building to overcome barriers and build the life they want.",
     },
     {
       title: "Battle Cry",
