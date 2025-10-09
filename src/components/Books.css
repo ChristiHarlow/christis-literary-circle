@@ -1,0 +1,93 @@
+/* Palette */
+:root{
+  --cream: #fdf0d5;
+  --deep-crimson: #780000;
+  --red: #c1121f;
+  --pumpkin: #e36414;
+  --navy: #003049;
+  --sky: #669bbc; /* Buy Now */
+  --ink: #1d1b1a;
+}
+
+/* Card container */
+.card{
+  display: flex;
+  flex-direction: column;
+  background: #fff;                 /* on cream page background */
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.10);
+}
+
+/* Cover image (consistent aspect) */
+.card-image{
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  background: var(--cream);
+}
+
+/* Body */
+.card-body{
+  padding: 1rem 1rem .5rem;
+}
+.card-title{
+  margin: 0 0 .25rem;
+  color: var(--deep-crimson);
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+.card-author{
+  color: var(--navy);
+  font-size: .95rem;
+  opacity: .9;
+}
+.card-desc{
+  margin-top: .5rem;
+  color: #4b4a47;
+  font-size: .95rem;
+}
+
+/* Footer */
+.card-footer{
+  margin-top: auto;
+  padding: .75rem 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.price{
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* Buttons */
+.btn{
+  appearance: none;
+  border: 0;
+  border-radius: 12px;
+  padding: .6rem .95rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .15s ease, opacity .15s ease, box-shadow .15s ease;
+}
+
+.btn-buy{
+  background: var(--sky);     /* #669bbc */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+.btn-buy:hover{
+  transform: translateY(-1px);
+  opacity: .96;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+}
