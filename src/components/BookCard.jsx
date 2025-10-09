@@ -17,14 +17,14 @@ export default function BookCard({ title, author, cover, price, link, descriptio
             target="_blank"
             rel="noopener noreferrer"
           >
-            More Information
+            Get The Book
           </a>
           <a
             className="btn"
             href={`/feedback/${encodeURIComponent(title)}`}
             style={{ background: "var(--pumpkin)", color: "#fff" }}
           >
-            Share Thoughts
+            Share Your Thoughts
           </a>
         </div>
       </div>
