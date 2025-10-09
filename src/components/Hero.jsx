@@ -46,8 +46,7 @@ export default function Hero() {
             marginTop: "0.75rem",
           }}
         >
-          Welcome to my little literary corner. I’ve handpicked stories that
-          challenge, comfort, and encourage—come sit, grab a cup of tea, and
+          Welcome to my little literary circle. Grab a cup of tea, and
           join the conversation.
         </p>
       </div>
